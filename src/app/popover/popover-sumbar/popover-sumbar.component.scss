@@ -1,0 +1,23 @@
+ion-list {
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#container {
+  background-color: #2a5a54;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  width: 150%;
+}
+
+#title {
+  color: white;
+}
+
+#buttons {
+  width: 150%;
+  --background: #2a5a54;
+  --background-activated: green;
+}

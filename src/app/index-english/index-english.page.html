@@ -1,0 +1,96 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title>iWareBatik</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false" style="color: black;"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+
+  <ion-grid fixed>
+
+    <ion-row>
+      <ion-col size="12">
+        <!-- Spinning Wheel -->
+        <div id="fab-spinning-wheel">
+          <img id="spinning-wheel" src="/assets/image/home_component/spinning_wheel/spinning_wheel.png"
+            (click)="disabledTapHere()" />
+          <img id="tap-here" src="/assets/image/home_component/spinning_wheel/tap_here.png"
+            (click)="disabledTapHere()" />
+          <ion-icon id="selector" name="ios-play"></ion-icon>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="9">
+        <!-- Input -->
+        <div id="fab-input">
+          <ion-input id="input" placeholder="try your luck, spin that wheel" readonly></ion-input>
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button id="goToRegion" (click)="linkToRegion()">
+          <ion-icon name="arrow-dropright"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row id="map-motifs">
+      <ion-col size="6">
+        <!-- Indonesian Map -->
+        <div id="fab-map-motifs">
+          <div id="discover">
+            <p>Discover Region</p>
+          </div>
+          <ion-slides [options]="sliderOpts" #Slides1 autoplay="5000" loop="true" speed="500"
+            (ionSlidesDidLoad)="slidesDidLoad1()">
+            <ion-slide *ngFor="let img of imagesIndonesia">
+              <img src="/assets/image/{{img}}.png" tappable routerLink="/indonesian-map" />
+            </ion-slide>
+          </ion-slides>
+          <ion-icon class="arrow" id="back-arrow" name="ios-arrow-round-back"></ion-icon>
+          <ion-icon class="arrow" id="forward-arrow" name="ios-arrow-round-forward"></ion-icon>
+        </div>
+      </ion-col>
+      <ion-col size="6">
+        <!-- Batik Motifs -->
+        <div id="fab-map-motifs">
+          <div id="discover">
+            <p>Discover Batik</p>
+          </div>
+          <ion-slides [options]="sliderOpts" #Slides2 autoplay="5000" loop="true" speed="500"
+            (ionSlidesDidLoad)="slidesDidLoad2()">
+            <ion-slide *ngFor="let img of imagesMotifs">
+              <img src="/assets/image/{{img}}.png" tappable routerLink="/batik-motifs" />
+            </ion-slide>
+          </ion-slides>
+          <ion-icon class="arrow" id="back-arrow" name="ios-arrow-round-back"></ion-icon>
+          <ion-icon class="arrow" id="forward-arrow" name="ios-arrow-round-forward"></ion-icon>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row id="buttons">
+      <ion-col>
+        <!-- Video UNESCO -->
+        <ion-icon id="buttonVideo" (click)="playVideo()" name="ios-play"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <!-- Games -->
+        <ion-icon id="buttonGames" routerLink="/games" name="logo-game-controller-b"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <!-- Batik Around You -->
+        <ion-icon id="buttonBatikAroundYou" routerLink="/batik-around-you" name="calendar"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <!-- Camera -->
+        <ion-icon id="buttonCamera" (click)="takePicture()" name="camera"></ion-icon>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

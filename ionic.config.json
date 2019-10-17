@@ -1,0 +1,7 @@
+{
+  "name": "iWareBatik",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

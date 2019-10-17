@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>South Sumatra</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false" style="color: black;"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+  <div *ngFor="let descriptions of description$">
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>About</ion-card-subtitle>
+        <ion-card-title [innerHTML]="descriptions.title.rendered"></ion-card-title>
+      </ion-card-header>
+      <ion-card-content [innerHTML]="descriptions.content.rendered">
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Landscape</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-slides [options]="sliderOpts">
+          <!-- numero di immagini da definire -->
+          <ion-slide
+            *ngFor="let img of [descriptions.image_region_1,descriptions.image_region_2,descriptions.image_region_3,descriptions.image_region_4,descriptions.image_region_5,descriptions.image_region_6,descriptions.image_region_7,descriptions.image_region_8,descriptions.image_region_9,descriptions.image_region_10]">
+            <img [src]="img.guid" tappable (click)="openPreview(img.guid, img.post_title, img.post_content)" />
+          </ion-slide>
+        </ion-slides>
+        <ion-icon class="arrow" id="back-arrow" name="ios-arrow-round-back"></ion-icon>
+        <ion-icon class="arrow" id="forward-arrow" name="ios-arrow-round-forward"></ion-icon>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Batik</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-slides [options]="sliderOpts">
+          <!-- numero di immagini da definire -->
+          <ion-slide
+            *ngFor="let img of [descriptions.image_batik_1,descriptions.image_batik_2,descriptions.image_batik_3,descriptions.image_batik_4,descriptions.image_batik_5,descriptions.image_batik_6,descriptions.image_batik_7,descriptions.image_batik_8,descriptions.image_batik_9,descriptions.image_batik_10,descriptions.image_batik_11,descriptions.image_batik_12]">
+            <img [src]="img[0].image.guid" tappable (click)="openPreview(img[0].image.guid, img[0].post_title, img[0].post_content)" />
+          </ion-slide>
+        </ion-slides>
+        <ion-icon class="arrow" id="back-arrow" name="ios-arrow-round-back"></ion-icon>
+        <ion-icon class="arrow" id="forward-arrow" name="ios-arrow-round-forward"></ion-icon>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Map</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="photo-thumbnail">
+          <pinch-zoom>
+            <img id="bali-map" [src]="descriptions.image_region_map.guid" />
+          </pinch-zoom>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Cities</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+
+        <ion-list>
+
+          <ion-item>
+            <ion-row>
+              <ion-col size="10">
+                <h1 [innerHTML]="descriptions.city_1"></h1>
+              </ion-col>
+              <ion-col size="2">
+                <ion-icon name="ios-arrow-dropright"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-item>
+
+        </ion-list>
+
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+
+</ion-content>

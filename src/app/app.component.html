@@ -1,0 +1,52 @@
+<ion-app>
+  <ion-menu contentId="content1" side="start">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title style="color: black;">Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content id="menu">
+      <ion-list>
+        <ion-item>
+          <ion-button id="menu-button" (click)="closeMenu()" routerLink="/index-english">
+            <ion-icon slot="start" name="ios-home"></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home
+          </ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button id="menu-button" (click)="closeMenu()" routerLink="/indonesian-map" expand="block">
+            <ion-icon slot="start" name="ios-map"></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Discover
+            Region
+          </ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button id="menu-button" (click)="closeMenu()" routerLink="/batik-motifs" expand="block">
+            <ion-icon slot="start" name="aperture"></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Discover
+            Batik
+          </ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button id="menu-button" (click)="closeMenu()" routerLink="/games">
+            <ion-icon slot="start" name="logo-game-controller-b"></ion-icon>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Games
+          </ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button id="menu-button" (click)="closeMenu()" routerLink="/batik-around-you">
+            <ion-icon slot="start" name="calendar"></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Batik
+            Around You
+          </ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+
+    <ion-footer>
+      <ion-item>
+        <ion-button id="menu-button" class="end-item" (click)="closeMenu()" routerLink="/home">
+          <ion-icon name="log-out"></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Change Language
+        </ion-button>
+      </ion-item>
+    </ion-footer>
+
+  </ion-menu>
+  <ion-router-outlet id="content1" main></ion-router-outlet>
+</ion-app>

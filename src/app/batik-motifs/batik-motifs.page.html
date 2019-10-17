@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Discover Batik</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false" style="color: black;"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+  <!-- searchbar and filter options -->
+  <ion-row>
+    <ion-col size="10">
+      <ion-searchbar id="search" [(ngModel)]="searchText"></ion-searchbar>
+    </ion-col>
+    <ion-col size="2" align-self-center>
+      <ion-icon name="options" (click)="presentPopoverFilter($event)"></ion-icon>
+    </ion-col>
+  </ion-row>
+
+  <!-- this list is dinamically take to web site -->
+  <ion-list>
+
+    <div id="container" *ngFor="let descriptions of description$">
+      <div id="container"
+        *ngIf="descriptions.title.rendered.toLowerCase().startsWith(this.searchText.toLowerCase()) || this.searchText == undefined">
+
+        <ion-item lines="none">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle [innerHTML]=" descriptions.title.rendered">
+              </ion-card-subtitle>
+            </ion-card-header>
+            <img [src]="descriptions.image.guid" />
+            <ion-card-content>
+              <p [innerHTML]="descriptions.content.rendered"></p>
+            </ion-card-content>
+            <ion-row class="cardfooter">
+              <ion-col>
+                <ion-button expand="block">Read More</ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-card>
+        </ion-item>
+
+      </div>
+    </div>
+
+  </ion-list>
+
+</ion-content>

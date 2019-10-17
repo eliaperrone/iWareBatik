@@ -1,0 +1,31 @@
+ion-toolbar {
+  --background: white;
+  --ion-color-base: transparent !important;
+}
+
+ion-title {
+  color: black;
+}
+
+ion-button {
+  --background: #2a5a54;
+  --background-activated: green;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+ion-icon {
+  width: 30px;
+  height: 30px;
+}
+
+ion-card {
+  margin-top: 1%;
+}
+
+#container {
+  margin: 0;
+  padding: 0;
+  height: 0.00001;
+  width: auto;
+}

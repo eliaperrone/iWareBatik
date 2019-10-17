@@ -1,0 +1,49 @@
+ion-toolbar {
+    --background: white;
+    --ion-color-base: transparent !important;
+  }
+  
+  ion-title {
+    color: black;
+  }
+  
+  ion-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 50px;
+  }
+  
+  .photo-thumbnail {
+    position: relative;
+    display: inline-block;
+  }
+  
+  ion-button {
+    --background: #2a5a54;
+    --background-activated: green;
+  }
+  
+  ion-slides {
+    margin-top: 1%;
+    background: white;
+  
+    img {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+  
+  .arrow {
+    width: 30px;
+    height: 30px;
+    color: #2a5a54;
+  }
+  
+  #forward-arrow {
+    margin-left: 73%;
+  }
+  
+  #back-arrow {
+    margin-left: 2%;
+  }
+  

@@ -1,0 +1,275 @@
+ion-toolbar {
+  --background: white;
+  --ion-color-base: transparent !important;
+}
+
+ion-title {
+  color: black;
+}
+
+ion-icon {
+  width: 10px;
+}
+
+.photo-thumbnail {
+  position: relative;
+  display: inline-block;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#zoom {
+  position: absolute;
+  top: 88%;
+  left: 5%;
+  width: 3%;
+  animation: blink 1s;
+  animation-iteration-count: infinite;
+}
+
+//aceh
+#pin1 {
+  position: absolute;
+  top: 4%;
+  left: 4.5%;
+}
+
+//bali
+#pin2 {
+  position: absolute;
+  top: 79%;
+  left: 43.5%;
+}
+
+//bangka-belitung
+#pin3 {
+  position: absolute;
+  top: 47.5%;
+  left: 28%;
+}
+
+//banten
+#pin4 {
+  position: absolute;
+  top: 70%;
+  left: 23%;
+}
+
+//bengkulu
+#pin5 {
+  position: absolute;
+  top: 54%;
+  left: 16%;
+}
+
+//gorontalo
+#pin6 {
+  position: absolute;
+  top: 27.5%;
+  left: 59.5%;
+}
+
+//jabar
+#pin7 {
+  position: absolute;
+  top: 70%;
+  left: 27.5%;
+}
+//jakarta
+#pin8 {
+  position: absolute;
+  top: 67.8%;
+  left: 25.5%;
+}
+
+//jambi
+#pin9 {
+  position: absolute;
+  top: 40%;
+  left: 19.2%;
+}
+
+//jateng
+#pin10 {
+  position: absolute;
+  top: 70.5%;
+  left: 34.5%;
+}
+
+//jatim
+#pin11 {
+  position: absolute;
+  top: 74%;
+  left: 37%;
+}
+
+//kalbar
+#pin12 {
+  position: absolute;
+  top: 36%;
+  left: 34.5%;
+}
+
+//kalimantan timur
+#pin13 {
+  position: absolute;
+  top: 34%;
+  left: 46%;
+}
+
+//kalimantan utara
+#pin14 {
+  position: absolute;
+  top: 22.5%;
+  left: 44%;
+}
+
+//kalimantan sealtan
+#pin15 {
+  position: absolute;
+  top: 45%;
+  left: 44.2%;
+}
+
+//kalteng
+#pin16 {
+  position: absolute;
+  top: 45.5%;
+  left: 40%;
+}
+
+//kepri
+#pin17 {
+  position: absolute;
+  top: 24%;
+  left: 24%;
+}
+
+//lampung
+#pin18 {
+  position: absolute;
+  top: 59.5%;
+  left: 22%;
+}
+
+//maluku
+#pin19 {
+  position: absolute;
+  top: 61%;
+  left: 72.5%;
+}
+
+//malut
+#pin20 {
+  position: absolute;
+  top: 28.5%;
+  left: 71%;
+}
+
+//nussa tenggara barat
+#pin21 {
+  position: absolute;
+  top: 82%;
+  left: 48%;
+}
+
+//nussa tenggara timur
+#pin22 {
+  position: absolute;
+  top: 83%;
+  left: 62%;
+}
+
+//pabar
+#pin23 {
+  position: absolute;
+  top: 40%;
+  left: 83%;
+}
+
+//papua
+#pin24 {
+  position: absolute;
+  top: 58%;
+  left: 93%;
+}
+
+//riau
+#pin25 {
+  position: absolute;
+  top: 33%;
+  left: 15%;
+}
+
+//sulbar
+#pin26 {
+  position: absolute;
+  top: 48%;
+  left: 52%;
+}
+
+//sulsel
+#pin27 {
+  position: absolute;
+  top: 56%;
+  left: 54%;
+}
+
+//sulteng
+#pin28 {
+  position: absolute;
+  top: 43%;
+  left: 56%;
+}
+
+//sultra
+#pin29 {
+  position: absolute;
+  top: 54%;
+  left: 58%;
+}
+
+//sulut
+#pin30 {
+  position: absolute;
+  top: 27.5%;
+  left: 63%;
+}
+
+//sumbar
+#pin31 {
+  position: absolute;
+  top: 38%;
+  left: 11%;
+}
+
+//sumsel
+#pin32 {
+  position: absolute;
+  top: 47%;
+  left: 20.5%;
+}
+
+//sumut
+#pin33 {
+  position: absolute;
+  top: 14%;
+  left: 9%;
+}
+
+//yogyakarta
+#pin34 {
+  position: absolute;
+  top: 77.6%;
+  left: 33.2%;
+}

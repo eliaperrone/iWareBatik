@@ -1,0 +1,46 @@
+ion-content {
+  --background: url(../../assets/image/background/background_home.jpg) 0 0/140% 100% no-repeat;
+}
+
+ion-title {
+  color: white;
+}
+
+ion-card {
+  --background: white;
+  text-align: center;
+}
+
+ion-col {
+  text-align: center;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+h1 {
+  position: relative;
+  top: -53%;
+  color: black;
+  font-weight: bold;
+  animation: blink 1s;
+  animation-iteration-count: infinite;
+}
+
+#select-language {
+  margin-top: 42%;
+}
+
+#logo {
+  width: 150px;
+  height: auto;
+}
